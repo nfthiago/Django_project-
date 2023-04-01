@@ -1,0 +1,22 @@
+#importing libraries - allowing imported models (bellow) to use it
+from django.db import models 
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+
+ROLE_CHOICE = (
+    (1, 'Admin'),
+    (2, 'Funcionário'),
+    (3, 'Cliente')
+)
+
+#importing models - creating db tables
+from .Rating import Rating
+from .DayWeek import DayWeek
+from .State import State
+from .City import City
+from .Neighborhood import Neighborhood
+from .Address import Address
+from .Genre import Genre
+from .Profile import Profile
+from .Movie import Movie
